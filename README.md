@@ -141,6 +141,14 @@ Determine what partition to mount from the NBD device. I used lslbk. it is preff
     # └─nbd0p2  43:2    0     1G  0 part
     # 
     # mount -r -t ufs -o ufstype=ufs2 /dev/nbd0p3 /media/[user]/[mountpoint]
+Check again, after mount , RO=1 ^ mountpoint = present
+
+    # root@host:# lsblk 
+    # NAME          MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS   
+    #nbd0           43:0    0   5.3G  1 disk 
+    #├─nbd0p1       43:1    0   260M  1 part 
+    #└─nbd0p2       43:2    0     5G  1 part  /media/[user]/[mountpoint]
+
 
 
 
