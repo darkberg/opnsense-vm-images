@@ -59,6 +59,10 @@ By default, the root partition uses the UFS file system. For a ZFS file system, 
 Building from source
 --------------------
 
+Return to the previous created directory : /usr/tools
+
+# cd /usr/tools
+
 All [tagged OPNsense versions](https://github.com/opnsense/core/tags) can be build by setting the `VERSION` option accordingly.
 
 VHDX image (Hyper-V), 3 GB root partition, no swap partition, EFI console, OPNsense 24.7.r1-amd64, UFS file system:
