@@ -121,6 +121,22 @@ Download the image file:
 
     # scp root@[2001:db8::a]:/usr/local/opnsense/build/24.7/[amd64|aarch64]/images/OPNsense-24.7[.x]-vm-[amd64|aarch64].[qcow2|vhdx|...] .
 
+
+For qcow2 image files, 
+    # sudo modprobe nbd
+    # sudo qemu-nbd -c /dev/nbd0 --read-only OPNsense-24.7-vm-aarch64.qcow2
+
+Determine what partition to mount of the NBD device. I used lslbk:
+
+root@host:# lsblk 
+NAME     MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sr0       11:0    1  1024M  0 rom  
+nbd0      43:0    0    21G  0 disk 
+├─nbd0p3  43:3    0    20G  0 part 
+├─nbd0p1  43:1    0  62.5K  0 part 
+└─nbd0p2  43:2    0     1G  0 part
+
+
 Caveats
 =======
 
