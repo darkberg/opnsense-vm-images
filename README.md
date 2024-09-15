@@ -61,7 +61,7 @@ Building from source
 
 Return to the previous created directory : /usr/tools
 
-# cd /usr/tools
+    # cd /usr/tools
 
 All [tagged OPNsense versions](https://github.com/opnsense/core/tags) can be build by setting the `VERSION` option accordingly.
 
